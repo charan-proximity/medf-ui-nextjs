@@ -1,0 +1,35 @@
+const constants = {
+  baseUrl: "https://medfit-backend.herokuapp.com/api/v1/",
+  //"http://localhost:8080/api/v1/",
+  //"https://medfit-backend.herokuapp.com/api/v1/",
+  appUrl: "http://appmedfit.s3-website.us-east-2.amazonaws.com/",
+  //"http://appmedfit.s3-website.us-east-2.amazonaws.com/"
+  signIn: "user/signIn",
+  signUp: "user/signUp",
+  getStudents: "/student",
+  SignOut: "user/signOut",
+  getUsersWithCondition: "user/getUsersWithCondition",
+  updateUser: "user/update",
+  addUser: "user/add",
+  getUser: "user/get",
+  getSpeciality: "specialty",
+  getDoctorSlots: "slots/getSlots",
+  addDoctorSlots: "slots",
+  booking: "slots/booking",
+  bookingDetails: "slots/bookingDetails",
+  updateBooking: "slots/updateBooking",
+  getNextSevenDaysDoctorSlots: "slots/nextSevenDaysSlots",
+  updateConsultancyFee: "user/updateConsultancyFee",
+  createRazorPayOrder: "razorpay/createRazorPayOrder",
+  fileupload: "fileupload",
+  getReports: "reports/get",
+  addReports: "reports/add",
+  updateReports: "reports/update",
+  dummyLogin: {
+    user: { email: "appmedfitpatient@gmail.com", password: "Medfit@123" },
+    admin: { email: "appmedfitadm1n@gmail.com", password: "Medfit@123" },
+    doctor: { email: "appmedfitdoctor@gmail.com", password: "Medfit@123" },
+  },
+};
+
+export default constants;
