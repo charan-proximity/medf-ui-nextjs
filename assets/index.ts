@@ -20,6 +20,16 @@ import UrologySpeciality from "./UrologySpeciality.jpg";
 import PhysioTheraphySpeciality from "./PhysioTheraphySpeciality.jpg";
 import DentalSpeciality from "./DentalSpeciality.jpg";
 import OphthalSpeciality from "./OphthalSpeciality.jpg";
+
+import Introsvg from "./img/illustration-intro.svg";
+import AvatarAnisha from "./img/avatar-anisha.png";
+
+import FBLogo from "./img/icon-facebook.svg";
+import WhiteLogo from "./img/logo-white.svg";
+import YTLogo from "./img/icon-youtube.svg";
+import TwitterLogo from "./img/icon-twitter.svg";
+import PinLogo from "./img/icon-pinterest.svg";
+import InstaLogo from "./img/icon-instagram.svg";
 export const specialtyImages = {
   docIcon,
   DermatologySpeciality,
@@ -44,4 +54,15 @@ export const homeImages = {
   ENT,
   Paediatric,
   Dental,
+};
+
+export const responsiveDesignImages = {
+  Introsvg,
+  AvatarAnisha,
+  FBLogo,
+  YTLogo,
+  WhiteLogo,
+  TwitterLogo,
+  PinLogo,
+  InstaLogo,
 };

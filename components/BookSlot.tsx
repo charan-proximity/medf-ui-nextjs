@@ -11,7 +11,8 @@ import { setBookingInfo } from "../store/booking";
 import { useAppDispatch } from "../store/redux";
 import LoadingPage from "./LoadingPage";
 import { getDoctorSlots } from "../services/slots.service";
-
+import DatesWidget from "./DatesWidget";
+import TimeSlot from "./TimeSlot";
 interface IbookSlot {
   onToggleBookingModal: () => void;
   onBookSlot: () => void;
@@ -25,8 +26,8 @@ function BookSlot({
   onBookSlot,
 }: IbookSlot) {
   const dispatch = useAppDispatch();
-  const SlotBookingDateHeaders = getNextSevenDays();
-  const [selectedDate, setSelectedDate] = useState(SlotBookingDateHeaders[0]);
+  const slotBookingDateHeaders = getNextSevenDays();
+  const [selectedDate, setSelectedDate] = useState(slotBookingDateHeaders[0]);
   let { timeSlotHeaders: timeSlotHeadersOld } = createSlots();
   const [timeSlotHeaders, setTimeSlotHeaders] =
     useState<SlotTimeHeadersType[]>();
@@ -65,8 +66,6 @@ function BookSlot({
     }
   };
 
-  const selectedDayClass = "text-primary-pink  p-0.5";
-  const selectedDateClass = "bg-primary-pink text-white p-2 rounded-full ";
   const getSlots = ({
     doctorId,
     fullDate,
@@ -116,7 +115,7 @@ function BookSlot({
       });
   };
 
-  const changeDateHandler = (slotDate: SlotDateType) => {
+  const handleDateChange = (slotDate: SlotDateType) => {
     setSelectedDate(slotDate);
     console.log("date changed", slotDate);
     if (doctor) {
@@ -170,38 +169,11 @@ function BookSlot({
             </div>
             <div className=" relative ">
               <section className="mt-4">
-                <div className=" h-20  overflow-hidden  shadow-xl ">
-                  <ul className="flex p-2 flex-row justify-between mx-10 items-center h-full ">
-                    {SlotBookingDateHeaders.map((head, index) => (
-                      <li
-                        className=""
-                        key={head.fullDate}
-                        onClick={() => changeDateHandler(head)}
-                      >
-                        <div className="text-xs flex flex-col ">
-                          <div
-                            className={` ${
-                              selectedDate.dayName == head.dayName
-                                ? selectedDayClass
-                                : ""
-                            }`}
-                          >
-                            {head.dayName}
-                          </div>
-                          <div
-                            className={` ${
-                              selectedDate.day == head.day
-                                ? selectedDateClass
-                                : "mt-2.5 pt-0.5"
-                            }`}
-                          >
-                            <p className=""> {head.day}</p>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <DatesWidget
+                  slotBookingDateHeaders={slotBookingDateHeaders}
+                  onDateChange={handleDateChange}
+                  selectedDate={selectedDate}
+                />
                 <section className="ml-5 text-sm   min-h-[32rem] overflow-y-scroll h-[25rem]  text-gray-800">
                   {loading ? (
                     <LoadingPage />
@@ -225,17 +197,11 @@ function BookSlot({
                                     (slot: SlotType) =>
                                       tsHeader.slotHeader ==
                                         slot.slotHeader && (
-                                        <button
+                                        <TimeSlot
                                           key={slot.id}
-                                          onClick={() => handleBookSlot(slot)}
-                                          className={`mx-4 h-8 px-4 py-1 hover:bg-primary-pink hover:text-white border border-primary-pink shadow-md cursor-pointer rounded-3xl ${
-                                            slot.isSelected ? "" : ""
-                                          }`}
-                                        >
-                                          <div className="time-slot-text ">
-                                            <div>{slot.value}</div>
-                                          </div>
-                                        </button>
+                                          onClickSlot={handleBookSlot}
+                                          slot={slot}
+                                        />
                                       )
                                   )}
                               </div>

@@ -1,7 +1,15 @@
+import { StaticImageData } from "next/image";
+
 export type SpecialityType = {
   name: string;
   type: string;
   about: string;
+};
+
+export type SpecialityImageType = {
+  name: string;
+  imgSrc: StaticImageData;
+  link: string;
 };
 
 export type DoctorType = {

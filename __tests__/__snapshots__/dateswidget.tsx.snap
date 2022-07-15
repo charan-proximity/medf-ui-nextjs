@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+
+
+exports[` Date Widget tests should be able to render the dates  1`] = `
+Array [
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" text-primary-pink  p-0.5"
+      >
+        Tue
+      </div>
+      <div
+        class=" bg-primary-pink text-white p-2 rounded-full "
+      >
+        <p
+          class=""
+        >
+           
+          28
+        </p>
+      </div>
+    </div>
+  </li>,
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" "
+      >
+        Wed
+      </div>
+      <div
+        class=" mt-2.5 pt-0.5"
+      >
+        <p
+          class=""
+        >
+           
+          29
+        </p>
+      </div>
+    </div>
+  </li>,
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" "
+      >
+        Thu
+      </div>
+      <div
+        class=" mt-2.5 pt-0.5"
+      >
+        <p
+          class=""
+        >
+           
+          30
+        </p>
+      </div>
+    </div>
+  </li>,
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" "
+      >
+        Fri
+      </div>
+      <div
+        class=" mt-2.5 pt-0.5"
+      >
+        <p
+          class=""
+        >
+           
+          01
+        </p>
+      </div>
+    </div>
+  </li>,
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" "
+      >
+        Sat
+      </div>
+      <div
+        class=" mt-2.5 pt-0.5"
+      >
+        <p
+          class=""
+        >
+           
+          02
+        </p>
+      </div>
+    </div>
+  </li>,
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" "
+      >
+        Sun
+      </div>
+      <div
+        class=" mt-2.5 pt-0.5"
+      >
+        <p
+          class=""
+        >
+           
+          03
+        </p>
+      </div>
+    </div>
+  </li>,
+  <li
+    class=""
+  >
+    <div
+      class="text-xs flex flex-col "
+    >
+      <div
+        class=" "
+      >
+        Mon
+      </div>
+      <div
+        class=" mt-2.5 pt-0.5"
+      >
+        <p
+          class=""
+        >
+           
+          04
+        </p>
+      </div>
+    </div>
+  </li>,
+]
+`;
